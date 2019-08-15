@@ -1,0 +1,49 @@
+<html>
+<title> PI_Customized Error Page </title>
+<body>
+      <H2 align=center>ERROR PAGE for Application "test_ERROR"</H2>
+<br><br>
+The following params are used for testing customized Errors
+<br><br>
+Transaction ID = ${NS_TRANSACTION_ID}
+<br><br><br>
+AppFW Session ID = ${NS_APPFW_SESSION_ID}
+<br><br><br>
+AppFW Violation Category = ${NS_APPFW_VIOLATION_CATEGORY}
+<br><br><br>
+AppFW Violation Log = ${NS_APPFW_VIOLATION_LOG}
+<br><br>
+<br>
+Appfw Session Cookie : ${COOKIE("my_really_long_ns_id")}
+<br><br>
+<br>
+PI expression COOKIE : ${HTTP.REQ.COOKIE.VALUE("my_really_long_ns_id")}
+<br><br>
+<br>
+PI expression CLIENT Ip : ${CLIENT.IP.SRC}
+<br><br>
+<br>
+PI expression TXID : ${HTTP.REQ.TXID}
+<br><br>
+<br>
+PI expression Req URL  : ${HTTP.REQ.URL}
+<br><br>
+<br>
+PI expression Req Header: ${HTTP.REQ.HEADER("Host")}
+<br><br>
+<br>
+PI expression Req URL Length  : ${HTTP.REQ.URL.LENGTH}
+<br><br>
+<br>
+PI expression Req Version: ${HTTP.REQ.VERSION}
+<br><br>
+<br>
+PI expression Req Hostname: ${HTTP.REQ.HOSTNAME}
+<br><br>
+<br>
+PI expression Req Full Header:
+<br><br>
+<br>
+
+</body>
+</html>

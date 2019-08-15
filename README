@@ -1,0 +1,16 @@
+
+
+========================================================
+For NGINX 
+========================================================
+
+-----------------------
+Authenticated Content : 
+-----------------------
+.htpasswd has the following users 
+Usernames : user1/user1 , user2/user2 
+
+In nginx /admin is configured for Auth
+
+
+

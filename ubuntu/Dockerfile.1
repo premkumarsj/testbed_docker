@@ -1,0 +1,8 @@
+FROM ubuntu:latest
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+# Get the packages needed for Ubuntu
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get -y update && apt-get -y upgrade && apt-get -y install ssh
+RUN apt-get -y install curl && apt-get -y install wget
+CMD tail -f /dev/null

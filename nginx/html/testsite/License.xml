@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AdventNetLicense>
+   <!--Please do not edit this license file. Editing this file will make the license invalid.-->
+   <Users>
+      <UserInfo Name="Netscaler1" CompanyName="NETSCALER" EmailID="Admin@adventnet.com" ACNTRL="NO" LicenseType="Registered" Key="nJbGSnDTGRbp9NS3dP3yxRbd3c3Gx7x3Gdb91dxnnza9S7lKdVXGnNDZKcA7zPbSfV33GNDcfdS7zflSGRQ7Kdla">
+         <ID>ID</ID>
+      </UserInfo>
+      <UserInfo Name="Netscaler2" CompanyName="NETSCALER" EmailID="Admin@adventnet.com" ACNTRL="NO" LicenseType="Registered" Key="nJbGSnDTGRbp9NS3dP3yxRbd3c3Gx7x3Gdb91dxnnza9S7lKdVXGnNDZKcA7zPbSfV33GNDcfdS7zfTSGRQ7Kdla">
+         <ID>ID</ID>
+      </UserInfo>
+      <UserInfo Name="Netscaler3" CompanyName="NETSCALER" EmailID="Admin@adventnet.com" ACNTRL="NO" LicenseType="Registered" Key="nJbGSnDTGRbp9NS3dP3yxRbd3c3Gx7x3Gdb91dxnnza9S7lKdVXGnNDZKcA7zPbSfV33GNDcfdS7zfbSGdQ7Kdla">
+         <ID>ID</ID>
+      </UserInfo>
+      <UserInfo Name="Netscaler4" CompanyName="NETSCALER" EmailID="Admin@adventnet.com" ACNTRL="NO" LicenseType="Registered" Key="nJbGSnDTGRbp9NS3dP3yxRbd3c3Gx7x3Gdb91dxnnza9S7lKdVXGnNDZKcA7zPbSfV33GNDcfdS7zdDSGdQ7Kdla">
+         <ID>ID</ID>
+      </UserInfo>
+      <UserInfo Name="Netscaler5" CompanyName="NETSCALER" EmailID="Admin@adventnet.com" ACNTRL="NO" LicenseType="Registered" Key="nJbGSnDTGRbp9NS3dP3yxRbd3c3Gx7x3Gdb91dxnnza9S7lKdVXGnNDZKcA7zPbSfV33GNDcfdS7zdlSGdQ7Kdla">
+         <ID>ID</ID>
+      </UserInfo>
+   </Users>
+   <LicenseeDetails ID="ID">
+      <Product Name="AdventNet WebNMS" Version="4.0.0" Type="Professional" Category="OEM"/>
+      <Component Name="Topo">
+         <Properties Name="NumberOfMO" Value="30000"/>
+      </Component>
+      <Component Name="ServerFramework">
+         <Properties Name="NumberOfClients" Value="10"/>
+         <Properties Name="BEFailOver" Value="true"/>
+      </Component>
+      <Component Name="NorthBound">
+         <Properties Name="CORBANorthBound" Value="true"/>
+         <Properties Name="JMXAgent" Value="true"/>
+      </Component>
+      <Component Name="SouthBound">
+         <Properties Name="CORBASouthBound" Value="true"/>
+         <Properties Name="TL1SouthBound" Value="true"/>
+      </Component>
+      <Component Name="Provisioning">
+         <Properties Name="Provisioning" Value="true"/>
+      </Component>
+      <Component Name="Studio"/>
+   </LicenseeDetails>
+   <LicenseKey>j8GK4ovKR4iN8Nj8s83jRpiN8Nj8s83jRpvKR4GNKjbC4Kjo1ltvKR4GNKjbC4KjoAbrOPGNKjbC4KjovKR44NviAxMSvKR4GNKjbC4RjnAbrOPGNKjbC4RjnvKR4Rv3OL8Xfgb01s4Nv8LPFORvQmKnyRjvvmXRfRv3Rvo0000VOMFORvQmKnjHjtMgOLXNj8ssvFjRp0I0IToMnQvas4vn4Nv3GAdjdjdjdjdjdj</LicenseKey>
+</AdventNetLicense>
+
