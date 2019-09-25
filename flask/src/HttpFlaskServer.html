@@ -1,0 +1,125 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module HttpFlaskServer</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>HttpFlaskServer</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/premkumarsj/Dev/docker/testbed/flask/src/HttpFlaskServer.py">/Users/premkumarsj/Dev/docker/testbed/flask/src/HttpFlaskServer.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="argparse.html">argparse</a><br>
+<a href="hashlib.html">hashlib</a><br>
+</td><td width="25%" valign=top><a href="json.html">json</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="random.html">random</a><br>
+<a href="re.html">re</a><br>
+</td><td width="25%" valign=top><a href="string.html">string</a><br>
+<a href="sys.html">sys</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-add_header"><strong>add_header</strong></a>()</dt><dd><tt>Adds&nbsp;header&nbsp;received&nbsp;in&nbsp;query&nbsp;string&nbsp;to&nbsp;the&nbsp;response.</tt></dd></dl>
+ <dl><dt><a name="-after_request"><strong>after_request</strong></a>(response)</dt></dl>
+ <dl><dt><a name="-before_request"><strong>before_request</strong></a>()</dt><dd><tt>Prints&nbsp;request&nbsp;header&nbsp;and&nbsp;body&nbsp;before&nbsp;route&nbsp;functions&nbsp;are&nbsp;called</tt></dd></dl>
+ <dl><dt><a name="-chunked"><strong>chunked</strong></a>()</dt><dd><tt>Sends&nbsp;chunked&nbsp;Response<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/chunked?size=128">http://10.102.34.232:5001/chunked?size=128</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked?size=128&amp;chunks=64,54,10">http://10.102.34.232:5001/chunked?size=128&amp;chunks=64,54,10</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked?file=DefaultFile&amp;chunks=75,50">http://10.102.34.232:5001/chunked?file=DefaultFile&amp;chunks=75,50</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked?file=DefaultFile">http://10.102.34.232:5001/chunked?file=DefaultFile</a><br>
+Default:&nbsp;http&nbsp;-&nbsp;1.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;chunks&nbsp;=&nbsp;10</tt></dd></dl>
+ <dl><dt><a name="-chunked_checksum"><strong>chunked_checksum</strong></a>()</dt><dd><tt>Sends&nbsp;chunked&nbsp;Response.&nbsp;Also&nbsp;adds&nbsp;checksum&nbsp;value&nbsp;of&nbsp;string&nbsp;in&nbsp;header.<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/chunked_checksum?size=128">http://10.102.34.232:5001/chunked_checksum?size=128</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_checksum?size=128&amp;chunks=64,54,10">http://10.102.34.232:5001/chunked_checksum?size=128&amp;chunks=64,54,10</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_checksum?file=DefaultFile&amp;chunks=75,50">http://10.102.34.232:5001/chunked_checksum?file=DefaultFile&amp;chunks=75,50</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_checksum?file=DefaultFile">http://10.102.34.232:5001/chunked_checksum?file=DefaultFile</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default:&nbsp;http&nbsp;-&nbsp;1.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;chunks&nbsp;=&nbsp;10</tt></dd></dl>
+ <dl><dt><a name="-chunked_close"><strong>chunked_close</strong></a>()</dt><dd><tt>Sends&nbsp;chunked&nbsp;Response.&nbsp;Also&nbsp;adds&nbsp;connection&nbsp;close&nbsp;header<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/chunked_close?size=128">http://10.102.34.232:5001/chunked_close?size=128</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_close?size=128&amp;chunks=64,54,10">http://10.102.34.232:5001/chunked_close?size=128&amp;chunks=64,54,10</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_close?file=DefaultFile&amp;chunks=75,50">http://10.102.34.232:5001/chunked_close?file=DefaultFile&amp;chunks=75,50</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_close?file=DefaultFile">http://10.102.34.232:5001/chunked_close?file=DefaultFile</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default:&nbsp;http&nbsp;-&nbsp;1.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;chunks&nbsp;=&nbsp;10</tt></dd></dl>
+ <dl><dt><a name="-chunked_keep_alive"><strong>chunked_keep_alive</strong></a>()</dt><dd><tt>Sends&nbsp;chunked&nbsp;Response.&nbsp;Also&nbsp;adds&nbsp;connection&nbsp;keep&nbsp;alive&nbsp;header<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/chunked_keep_alive?size=128">http://10.102.34.232:5001/chunked_keep_alive?size=128</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_keep_alive?size=128&amp;chunks=64,54,10">http://10.102.34.232:5001/chunked_keep_alive?size=128&amp;chunks=64,54,10</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_keep_alive?file=DefaultFile&amp;chunks=75,50">http://10.102.34.232:5001/chunked_keep_alive?file=DefaultFile&amp;chunks=75,50</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/chunked_keep_alive?file=DefaultFile">http://10.102.34.232:5001/chunked_keep_alive?file=DefaultFile</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default:&nbsp;http&nbsp;-&nbsp;1.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;chunks&nbsp;=&nbsp;10</tt></dd></dl>
+ <dl><dt><a name="-clear"><strong>clear</strong></a>()</dt><dd><tt>Clears&nbsp;all&nbsp;variables</tt></dd></dl>
+ <dl><dt><a name="-conn"><strong>conn</strong></a>()</dt><dd><tt>Sends&nbsp;default&nbsp;HTTP&nbsp;Response&nbsp;based&nbsp;on&nbsp;version<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/conn?http=11">http://10.102.34.232:5001/conn?http=11</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/conn?http=1.1">http://10.102.34.232:5001/conn?http=1.1</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/conn">http://10.102.34.232:5001/conn</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Uses&nbsp;HTTP&nbsp;1.0)</tt></dd></dl>
+ <dl><dt><a name="-conn_close"><strong>conn_close</strong></a>()</dt><dd><tt>Sends&nbsp;connection&nbsp;close&nbsp;header&nbsp;in&nbsp;response.<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/conn_close?http=11">http://10.102.34.232:5001/conn_close?http=11</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/conn_close?http=1.1">http://10.102.34.232:5001/conn_close?http=1.1</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/conn_close">http://10.102.34.232:5001/conn_close</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Uses&nbsp;HTTP&nbsp;1.0)</tt></dd></dl>
+ <dl><dt><a name="-conn_keep_alive"><strong>conn_keep_alive</strong></a>()</dt><dd><tt>Sends&nbsp;connection&nbsp;keep&nbsp;alive&nbsp;header&nbsp;in&nbsp;response.<br>
+URL&nbsp;-&nbsp;<a href="http://10.102.34.232:5001/conn_keep_alive?http=11">http://10.102.34.232:5001/conn_keep_alive?http=11</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/conn_keep_alive?http=1.1">http://10.102.34.232:5001/conn_keep_alive?http=1.1</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/conn_keep_alive">http://10.102.34.232:5001/conn_keep_alive</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Uses&nbsp;HTTP&nbsp;1.0)</tt></dd></dl>
+ <dl><dt><a name="-delayed_server"><strong>delayed_server</strong></a>()</dt><dd><tt>Takes&nbsp;delay&nbsp;time&nbsp;in&nbsp;ms&nbsp;and&nbsp;send&nbsp;packets&nbsp;or&nbsp;burst&nbsp;of&nbsp;packets&nbsp;interleaved&nbsp;with&nbsp;this&nbsp;delay.<br>
+Usage:&nbsp;<a href="http://10.102.34.232:5001/delayed_server?delay=11&amp;http=1.1&amp;file=DefaultFile">http://10.102.34.232:5001/delayed_server?delay=11&amp;http=1.1&amp;file=DefaultFile</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/delayed_server?delay=10">http://10.102.34.232:5001/delayed_server?delay=10</a>&nbsp;(Uses&nbsp;HTTP&nbsp;1.0)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/delayed_server">http://10.102.34.232:5001/delayed_server</a>&nbsp;(Uses&nbsp;delay&nbsp;of&nbsp;5ms)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Default:&nbsp;http&nbsp;-&nbsp;1.0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delay&nbsp;-&nbsp;5ms</tt></dd></dl>
+ <dl><dt><a name="-doc"><strong>doc</strong></a>()</dt><dd><tt>View&nbsp;documentation.</tt></dd></dl>
+ <dl><dt><a name="-echo"><strong>echo</strong></a>()</dt><dd><tt>Echoes&nbsp;the&nbsp;request.</tt></dd></dl>
+ <dl><dt><a name="-feo"><strong>feo</strong></a>(path)</dt><dd><tt>Returns&nbsp;HTML&nbsp;file&nbsp;and&nbsp;modifies&nbsp;some&nbsp;mentioned&nbsp;headers&nbsp;in&nbsp;response.<br>
+Usage:&nbsp;<a href="http://10.102.34.232:5001/feointerop/alltest.html?arg1=Cache-Control{&quot;image&quot;:&quot;private&quot;,&quot;javascript&quot;:&quot;public">http://10.102.34.232:5001/feointerop/alltest.html?arg1=Cache-Control{&quot;image&quot;:&quot;private&quot;,&quot;javascript&quot;:&quot;public</a>",<br>
+"css":"disable"}&amp;arg2=ETag{"image":"enable","css":"disable"}<br>
+&nbsp;<br>
+Note&nbsp;-&nbsp;/clear&nbsp;needs&nbsp;to&nbsp;be&nbsp;called&nbsp;before/after&nbsp;each&nbsp;usage</tt></dd></dl>
+ <dl><dt><a name="-generate_string"><strong>generate_string</strong></a>(size)</dt><dd><tt>Returns&nbsp;a&nbsp;string&nbsp;of&nbsp;specified&nbsp;size,&nbsp;which&nbsp;is&nbsp;generated&nbsp;randomly</tt></dd></dl>
+ <dl><dt><a name="-get_checksum"><strong>get_checksum</strong></a>(str)</dt><dd><tt>Returns&nbsp;md5&nbsp;checksum&nbsp;of&nbsp;string&nbsp;input</tt></dd></dl>
+ <dl><dt><a name="-get_chunk_encoded_str"><strong>get_chunk_encoded_str</strong></a>(file_name<font color="#909090">=None</font>, chunk_size_list<font color="#909090">=None</font>, orig_str<font color="#909090">=None</font>)</dt><dd><tt>Takes&nbsp;a&nbsp;file&nbsp;or&nbsp;a&nbsp;string&nbsp;as&nbsp;input&nbsp;and&nbsp;converts&nbsp;it&nbsp;into&nbsp;chunk&nbsp;encoded&nbsp;format</tt></dd></dl>
+ <dl><dt><a name="-get_http_version"><strong>get_http_version</strong></a>(http_ver)</dt><dd><tt>Takes&nbsp;value&nbsp;of&nbsp;query&nbsp;string&nbsp;parameter&nbsp;named&nbsp;http<br>
+Returns&nbsp;version&nbsp;to&nbsp;be&nbsp;used&nbsp;for&nbsp;response</tt></dd></dl>
+ <dl><dt><a name="-incorrect_content_length"><strong>incorrect_content_length</strong></a>()</dt><dd><tt>Send&nbsp;a&nbsp;response&nbsp;where&nbsp;content-Length&nbsp;header&nbsp;is&nbsp;present&nbsp;but&nbsp;following&nbsp;data&nbsp;is&nbsp;more&nbsp;than&nbsp;the&nbsp;mentioned&nbsp;length.<br>
+Usage:&nbsp;<a href="http://10.102.34.232:5001/incorrect_content_length">http://10.102.34.232:5001/incorrect_content_length</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/incorrect_content_length?http=1.0">http://10.102.34.232:5001/incorrect_content_length?http=1.0</a></tt></dd></dl>
+ <dl><dt><a name="-invalid_chunk_encoding"><strong>invalid_chunk_encoding</strong></a>()</dt><dd><tt>Transfer-Encoding:&nbsp;chunked&nbsp;is&nbsp;sent&nbsp;in&nbsp;response&nbsp;,&nbsp;but&nbsp;response&nbsp;is&nbsp;not&nbsp;encoded<br>
+Usage:&nbsp;<a href="http://10.102.34.232:5001/invalid_chunk_encoding">http://10.102.34.232:5001/invalid_chunk_encoding</a></tt></dd></dl>
+ <dl><dt><a name="-invalid_content_length"><strong>invalid_content_length</strong></a>()</dt><dd><tt>Content-Length&nbsp;header&nbsp;is&nbsp;present&nbsp;but&nbsp;it&nbsp;has&nbsp;some&nbsp;invalid&nbsp;value<br>
+Usage:&nbsp;<a href="http://10.102.34.232:5001/invalid_content_length">http://10.102.34.232:5001/invalid_content_length</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://10.102.34.232:5001/invalid_content_length?http=1.0">http://10.102.34.232:5001/invalid_content_length?http=1.0</a></tt></dd></dl>
+ <dl><dt><a name="-modify_cache_control_header"><strong>modify_cache_control_header</strong></a>(response)</dt></dl>
+ <dl><dt><a name="-reset"><strong>reset</strong></a>()</dt></dl>
+ <dl><dt><a name="-response_code"><strong>response_code</strong></a>()</dt><dd><tt>Send&nbsp;response&nbsp;with&nbsp;status&nbsp;code&nbsp;provided&nbsp;in&nbsp;query&nbsp;string&nbsp;param.<br>
+Not&nbsp;Fully&nbsp;implemented</tt></dd></dl>
+ <dl><dt><a name="-sleep"><strong>sleep</strong></a>(...)</dt><dd><tt><a href="#-sleep">sleep</a>(seconds)<br>
+&nbsp;<br>
+Delay&nbsp;execution&nbsp;for&nbsp;a&nbsp;given&nbsp;number&nbsp;of&nbsp;seconds.&nbsp;&nbsp;The&nbsp;argument&nbsp;may&nbsp;be<br>
+a&nbsp;floating&nbsp;point&nbsp;number&nbsp;for&nbsp;subsecond&nbsp;precision.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>app</strong> = &lt;Flask 'HttpFlaskServer'&gt;<br>
+<strong>argv</strong> = ['/usr/bin/pydoc', '-w', './HttpFlaskServer.py']<br>
+<strong>modification_dict</strong> = {}<br>
+<strong>request</strong> = &lt;LocalProxy unbound&gt;</td></tr></table>
+</body></html>

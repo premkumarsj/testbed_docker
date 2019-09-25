@@ -1,0 +1,16 @@
+
+Port : 80 
+
+HtmlFiles : 
+
+FlaskFiles :
+
+Authentication: 
+   Type : Basic 
+   URL : /admin/
+   Credentials : user1/user1 , user2/user2 
+   Usage:
+   curl --user user1:user1 localhost/admin/file5k.html 
+
+   [Todo]Try : https://www.nginx.com/resources/wiki/modules/auth_digest/
+

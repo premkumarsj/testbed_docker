@@ -1,0 +1,17 @@
+
+Documentation 
+https://info.citrite.net/display/nsdevtest/HttpFlaskServer
+
+Slight modifications needed for container environment in the 'doc' function . 
+
+Setup :
+   Have a DefaultFile and .html ( doc) generated before creating the image 
+   Runs on Port 5000 
+   Requests coming to  :80/flask are redirected to this container .
+
+Sample : 
+   http://localhost:5000/doc { direct access }
+   http://localhost/flask/doc { through nginx } 
+
+   http://localhost/flask/chunked?size=128
+     

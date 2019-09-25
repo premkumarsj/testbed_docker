@@ -1,0 +1,5 @@
+Port:8080 
+
+Content: 
+  html     : only sample files are there .
+  cgi-bin  : not working 

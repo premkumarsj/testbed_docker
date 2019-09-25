@@ -489,7 +489,8 @@ def doc():
     """
     View documentation.
     """
-    f = open(os.path.dirname(os.path.realpath(__file__)) + '/' + __file__.replace('.py', '.html'), 'r')
+    #f = open(os.path.dirname(os.path.realpath(__file__)) + '/' + __file__.replace('.py', '.html'), 'r')
+    f = open(__file__.replace('.py', '.html'), 'r')
     content = f.read()
     f.close()
     return make_response(content)

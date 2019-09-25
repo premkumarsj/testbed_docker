@@ -15,7 +15,7 @@ for (my $j = 1; $j <=10; $j++)
 {
 print "6"x10;
 }
-sleep 60 ;
+sleep 6 ;
 for (my $j = 1; $j <=10; $j++)
 {
 print "7"x10;

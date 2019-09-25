@@ -23,11 +23,13 @@ server {
 	root   /usr/share/nginx/html;
     }
 
+    #forward urls with flask to flask microservice 
     location /flask {
 	rewrite /flask/(.*) /$1 break;
 	proxy_pass http://flask;
     }
 
+    #forward urls with flask to flask microservice
     location /cgi-bin { 
 	#rewrite /cgi-bin/(.*) /$1 break;
 	proxy_pass http://apache;
