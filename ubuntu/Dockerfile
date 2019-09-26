@@ -16,6 +16,13 @@ RUN apt-get -y install curl && apt-get -y install wget
 RUN apt-get -y install vim 
 RUN apt-get -y install iputils-ping
 RUN apt-get -y install traceroute
+RUN apt-get -y install tcpdump
+RUN apt-get -y install python3.7 
+RUN apt-get -y install python-pip
+RUN apt-get -y install apache2-utils
+RUN apt-get -y install hping3
+
+
 RUN echo 'PS1=ubuntu#' >> /root/.bashrc
 
 RUN apt-get clean && \

@@ -1,0 +1,11 @@
+
+Access:
+SSH access to shell :
+	ssh root@localhost -p 3000
+
+SCP access to download files 
+	scp -P 3000 root@localhost:/root/temp .
+
+TcpDump 
+	tcpdump -A 
+        

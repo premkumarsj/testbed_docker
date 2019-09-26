@@ -14,4 +14,10 @@ Sample :
    http://localhost/flask/doc { through nginx } 
 
    http://localhost/flask/chunked?size=128
-     
+
+   Errors from Flasks are masked by nginx 
+   http://localhost:5000/flask 
+     Get a reset . 
+
+   http://localhost/flask/reset
+     Get a 502 gateway error      
