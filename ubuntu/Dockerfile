@@ -11,15 +11,23 @@ RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_confi
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 RUN mkdir /root/.ssh
-RUN apt-get -y update && apt-get -y upgrade && apt-get -y install ssh
-RUN apt-get -y install curl && apt-get -y install wget
-RUN apt-get -y install vim 
-RUN apt-get -y install iputils-ping
-RUN apt-get -y install traceroute
-RUN apt-get -y install tcpdump
-RUN apt-get -y install python3.7 
-RUN apt-get -y install python-pip
-RUN apt-get -y install apache2-utils
+RUN apt-get -y update && apt-get -y upgrade && \ 
+    apt-get -y install ssh &&  \ 
+    apt-get -y install curl && \
+    apt-get -y install wget && \
+    apt-get -y install vim && \  
+    apt-get -y install iputils-ping && \
+    apt-get -y install traceroute && \
+    apt-get -y install tcpdump && \
+    apt-get -y install python3.7 && \
+    apt-get -y install python-pip && \
+    apt-get -y install apache2-utils && \
+    apt-get -y install net-tools && \
+    apt-get -y install unzip
+
+RUN wget https://github.com/grafov/hulk/archive/master.zip && \
+    unzip master.zip
+
 
 RUN echo 'PS1=ubuntu#' >> /root/.bashrc
 
