@@ -1,5 +1,18 @@
 version: '2'
 services:
+  cpx:
+    container_name: "cpx"
+    image: "cpx:13.0-41.23"
+    privileged: true
+    volumes:
+      - ./cpx:/var/cpx
+    environment:
+      - CPX_CORES=1
+      - CPX_CONFIG='{"YIELD":"No"}'
+      - EULA=yes
+    ports:
+      - '10.106.137.213:9443:9443'
+      - '10.106.137.213:9080:9080'
   nginx:
       restart: always 
       build:
