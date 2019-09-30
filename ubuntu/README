@@ -9,7 +9,31 @@ SCP access to download files
 TcpDump 
 	tcpdump -A 
 
+Tools  :
+---------
+Torshammer1.0:
+  ./torshammer.py -t 192.168.1.100 -r 256
+  Read README within the dir for more usage 
+
 Hulk: 
  https://allabouttesting.org/hulk-ddos-tool-complete-installation-usage-with-examples/
- cd hulk-master/ ; python hulk.py  10.106.137.210/testsite/file5k.html
-         
+ cd tools/hulk-master/ ; python hulk.py  10.106.137.210/testsite/file5k.html
+        
+ Go version of hulk needs to tired out [Todo] 
+
+ddosim:
+  Unable to install [Todo]. 
+
+pyloris-3.2:
+  GUI tool . Need to find how to use it in ubuntu [To]
+
+r-u-dead-yet:
+  Setup conf file and use 
+  python r-u-dead-yet-v2.2.py 
+  form is required [Todo]
+
+slowloris: 
+  https://github.com/llaera/slowloris.pl
+  Usage :  
+  perl slowloris.pl -dns http://10.106.137.210/ 
+

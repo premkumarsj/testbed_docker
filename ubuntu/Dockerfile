@@ -1,5 +1,6 @@
 FROM       ubuntu:18.04
-
+ENV TZ=Asia/Kolkata
+COPY ./tools/ /root/tools
 RUN apt-get update
 
 RUN apt-get install -y openssh-server
@@ -11,7 +12,9 @@ RUN sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_confi
 RUN sed -ri 's/UsePAM yes/#UsePAM yes/g' /etc/ssh/sshd_config
 
 RUN mkdir /root/.ssh
-RUN apt-get -y update && apt-get -y upgrade && \ 
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN apt-get -y update && \
+    apt-get -y upgrade && \ 
     apt-get -y install ssh &&  \ 
     apt-get -y install curl && \
     apt-get -y install wget && \
@@ -23,10 +26,11 @@ RUN apt-get -y update && apt-get -y upgrade && \
     apt-get -y install python-pip && \
     apt-get -y install apache2-utils && \
     apt-get -y install net-tools && \
-    apt-get -y install unzip
+    apt-get -y install unzip && \ 
+    apt-get -y install hping3 
 
-RUN wget https://github.com/grafov/hulk/archive/master.zip && \
-    unzip master.zip
+#RUN wget https://github.com/grafov/hulk/archive/master.zip && \
+#    unzip master.zip
 
 
 RUN echo 'PS1=ubuntu#' >> /root/.bashrc
