@@ -1,0 +1,161 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<title>Static and Dynamic Pages</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+<div align="center"><center>
+
+<table border="0" cellspacing="5" width="100%" bgcolor="#F2F2FF">
+  <tr>
+    <td><p align="left"><font face="Verdana" color="#000080" size="5"><strong>Static and
+    Dynamic Pages</strong></font></td>
+  </tr>
+</table>
+</center></div>
+
+<hr>
+
+<h1 align="left"><font color="#000080" face="Verdana" size="4"><strong>Static: WebStone</strong></font></h1>
+
+<p><font size="2" face="Verdana">Each of the following files has a specific size: 
+5 Bytes, 50 Bytes, 500 Bytes, 500 Bytes(read below), 512 Bytes, 5 KBytes, 50 KBytes, 500 KBytes and finally 5 MBytes.</font></p>
+
+<ul>
+  <li><a href="file5.html">file5.html</a></li>
+  <li><a href="file50.html">file50.html</a></li>
+  <li><a href="file500.html">file500.html</a></li>
+  <li><a href="file500.asp">file500.asp</a> same as file500.html but forces 'chunked transfer encoding' via asp: <%response.addheader "Transfer-Encoding", "chunked"%></li>
+  <li><a href="file512.html">file512.html</a></li>
+  <li><a href="file5k.html">file5k.html</a></li>
+  <li><a href="file50k.html">file50k.html</a></li>
+  <li><a href="file500k.html">file500k.html</a></li>
+  <li><a href="file5m.html">file5m.html</a></li>
+</ul>
+
+<hr>
+
+<p><font color="#000080" face="Verdana" size="4"><strong>Dynamic: Any Size Response</strong></font></p>
+
+<p><font size="2" face="Verdana">According to the value of &quot;NumberOfLines&quot; in
+the QueryString the content of the retreived URL contains <i>NumberOfLines</i> lines. Play
+around changing the value in the Querystring manually and take a look at dynamicsize.asp
+to see how it works. </font></p>
+
+<form method="GET" name="dynamic size" action="dynamicsize.asp">
+  <p><font face="Verdana"><small>number of lines: </small><input type="text"
+  name="NumberOfLines" size="3"> <input type="submit" value="Submit" name="B1"></font></p>
+</form>
+
+<hr>
+
+<p><font color="#000080" face="Verdana" size="4"><strong>Loop a specific period of time:
+send visible response, loop, send remaining response</strong></font></p>
+
+<p><font size="2" face="Verdana">This ASP gets the number of seconds from the querystring and simply loops until
+the time has passed.<br> 
+<font size="2" face="Verdana">
+<XMP>
+  ...
+  starttime = Hour(Now())*60*60+Minute(Now())*60+Second(Now())
+  endtime = starttime + Request.QueryString("seconds")
+  Do
+    quittime = Hour(Now())*60*60+Minute(Now())*60+Second(Now())
+    If (endtime <= quittime) then
+      Exit Do
+    End If
+  Loop
+  ...
+</XMP>
+</font>
+</font></p>
+
+<font color="#000000" size="1" face="Verdana">
+
+<form method="GET" action="loopfor.asp">
+  <p></font><font color="#000000" face="Verdana" size="2">Loop for <input type="text"
+  name="seconds" size="4" value="5">Seconds<input type="submit" value="Loop now!" name="B1"></font><font
+  color="#000000" size="1" face="Verdana"></p>
+</form>
+</font>
+
+<hr>
+
+<p><font color="#000080" face="Verdana" size="4"><strong>Loop a specific period of time:
+loop, send response</strong></font></p>
+
+<p><font size="2" face="Verdana">This ASP is useful to test server busy time, since it
+doesnt send anything back until the time is over.</font></p>
+<font color="#000000" size="1" face="Verdana">
+
+<form method="GET" action="loopfornull.asp">
+  <p></font><font color="#000000" face="Verdana" size="2">Loop for <input type="text"
+  name="seconds" size="4" value="5">Seconds<font color="#000000" size="1" face="Verdana"><input
+  type="submit" value="Loop now!" name="B1"></font></font></p>
+  <font color="#000000" size="1" face="Verdana">
+</form>
+</font>
+
+<hr>
+
+<p><font color="#000080" face="Verdana" size="4"><strong>Large HTML page with Images:</strong></font></p>
+
+<p><font size="2" face="Verdana"><a href="LargePageWithImages.html">LargePageWithImages.html</a>.</font></p>
+
+<hr>
+
+<p><font color="#000080" face="Verdana" size="4"><strong>Embedded: Images</strong></font></p>
+
+<table border="3" cellpadding="0" cellspacing="0" width="100%"
+background="bg_logo_segue.gif" bgcolor="#00006C">
+  <tr>
+    <td>&nbsp;<p>&nbsp;</p>
+    <div align="center"><center><table border="3" cellpadding="0" cellspacing="0"
+    bgcolor="#FFFFFF">
+      <tr>
+        <td><img src="quest_logo.gif" width="193" height="291" alt="quest_logo.gif (5777 bytes)"></td>
+      </tr>
+    </table>
+    </center></div><p>&nbsp;</p>
+    <p>&nbsp;</td>
+  </tr>
+</table>
+
+<hr>
+
+<p>
+  <font color="#000080" face="Verdana" size="4">
+    <strong>HTML page with very large images.</strong>
+  </font>
+</p>
+<p>
+  <font size="2" face="Verdana">
+    <p>
+      This test shall show how many concurrent connections and threads webbrowsers open to downlaod the images.
+    </p>
+    <p>
+      <a href="LargeImages.html">LargeImages.html</a>
+    </p>
+  </font>
+</p>
+
+<hr>
+
+<p>
+  <font color="#000080" face="Verdana" size="4">
+    <strong>HTML page with two frames and large contents.</strong>
+  </font>
+</p>
+<p>
+  <font size="2" face="Verdana">
+    <p>
+      <a href="LargeFrames.html">LargeFrames.html</a>
+    </p>
+  </font>
+</p>
+
+</body>
+</html>

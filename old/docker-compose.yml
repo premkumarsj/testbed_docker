@@ -1,0 +1,30 @@
+version: '2'
+services:
+  nginx:
+      restart: always 
+      build:
+        dockerfile: Dockerfile
+        context: ./nginx
+      ports:
+          - '80:80'
+  flask:
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./flask
+      ports:
+          - '5000:5000'
+  apache:
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./apache
+      ports:
+          - '8080:8080'
+  ubuntu: 
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./ubuntu
+      ports:
+          - '3000:22'

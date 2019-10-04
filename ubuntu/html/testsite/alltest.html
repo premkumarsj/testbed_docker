@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+
+	Design by Free CSS Templates
+	http://www.freecsstemplates.org
+	Released for free under a Creative Commons Attribution License
+
+	Name       : Serious Face
+	Version    : 1.0
+	Released   : 20130222
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<title>Content Optimsation Demo</title>
+    </head>
+    <body>
+		
+<link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="stylesheet" type="text/css" href="style1.css">
+		<link rel="stylesheet" type="text/css" href="style2.css">
+
+
+		<script>
+
+
+
+function digitvalidation(entered, min, max, alertbox, datatype)
+{
+// Digit Validation by Henrik Petersen / NetKontoret
+// Explained at www.echoecho.com/jsforms.htm
+// Please do not remove this line and the two lines above.
+with (entered)
+{
+checkvalue=parseFloat(value);
+if (datatype)
+{smalldatatype=datatype.toLowerCase();
+if (smalldatatype.charAt(0)=="i") 
+{checkvalue=parseInt(value); if (value.indexOf(".")!=-1) {checkvalue=checkvalue+1}};
+}
+if ((parseFloat(min)==min && value.length<min) || (parseFloat(max)==max && value.length>max) || value!=checkvalue)
+{if (alertbox!="") {alert(alertbox);} return false;}
+else {return true;}
+}
+}
+
+
+</script>
+		<script type="text/javascript" src="formval.js"></script>
+
+		<div id="bg">
+			<div id="outer">
+				<div id="header">
+					<div id="logo">
+						<h1>
+							<a href="#">Content Optimzation</a>
+						</h1>
+					</div>
+					<div id="search">
+						<form action="" method="post">
+							<input class="text" name="search" size="32" maxlength="64" /><input class="button" type="submit" value="Search" />
+						</form>
+					</div>
+					<div id="nav">
+						<ul>
+							<li class="first active">
+								<img src="logs.gif" >
+							</li>
+							<li>
+								<img src="KML.png" >
+							</li>
+							<li>
+								<img src="wheel.gif" >
+							</li>
+							<li>
+								<img src="Cat_folder.gif" >
+							</li>
+						</ul>
+						<br class="clear" />
+					</div>
+				</div>
+				<div id="banner">
+					<img src="oldbang.jpg" width="932" height="172" alt="" />
+				</div>
+				<div id="main">
+					<div id="sidebar">
+						<h3>
+							Patners
+						</h3>
+						<ul class="linkedList">
+							<li class="first">
+								<img src="media.gif" width="120" height="32">
+							</li>
+							<li>
+								<img src="Eclipse.png" >
+							</li>
+							<li>
+								<img src="attherate.jpg" width="120" height="120">
+							</li>
+						</ul>
+						<h3>
+							People 
+						</h3>
+						<div class="dateList">
+							<ul class="linkedList">
+								<li class="first">
+								<img src="gif.gif"  width="120" height="120" >
+								</li>
+								<li>
+								<img src="people.png" >
+								</li>
+								<li>
+								<img src="ns_good.gif" width="120" height="120" >
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="content">
+						<div id="box1">
+							<h2>
+								Welcome to Citrix Content Optimzation Demo
+							</h2><img class="left" src="citrix_logo.gif" width="184" height="184" alt="" />
+								<ul class="linkedList">
+								<li class="first">
+									<p> Image compression and bandwidth savings
+									</p>
+								</li>
+								<li>
+									<p> Decrease Number of HTTP requests
+									</p>
+								</li>
+								<li>
+									<p> Great Reponse Times
+									</p>
+								</li>
+								</ul>
+						</div>
+						<div id="box2">
+							<h2>hi
+								Hardware and Software
+							</h2>
+							<ul class="imageList">
+								<li class="first">
+									<img class="left" src="netscaler_logo.gif" width="72" height="72" alt="" /> <span>Netscaler Rocks</span>
+								</li>
+								<li>
+									<img class="left" src="linux_inside.gif" width="72" height="72" alt="" /> <span>Intel Ncore Technology </span>
+								</li>
+								<li class="last">
+									<img class="left" src="firefox.gif" width="72" height="72" alt="" /> <span>Firebug Is the debugging tool</span>
+								</li>
+							</ul>
+						</div>
+						<div id="box3">
+							<h3>
+								Mobile Technology and Citrix
+							</h3><img class="top" src="Splash_01_02_slice_01.gif" width="360" height="155" alt="" />
+							<p>
+									Citrix Netscaler
+							</p>
+						</div>
+						<br class="clear" />
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+		</div>
+    </body>
+</html>

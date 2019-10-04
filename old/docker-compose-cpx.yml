@@ -1,0 +1,43 @@
+version: '2'
+services:
+  cpx:
+    container_name: "cpx"
+    image: "cpx:13.0-41.23"
+    privileged: true
+    volumes:
+      - ./cpx:/var/cpx
+    environment:
+      - CPX_CORES=1
+      - CPX_CONFIG='{"YIELD":"No"}'
+      - EULA=yes
+    ports:
+      - '9443:9443'
+      - '9080:9080'
+  nginx:
+      restart: always 
+      build:
+        dockerfile: Dockerfile
+        context: ./nginx
+      ports:
+          - '80:80'
+  flask:
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./flask
+      ports:
+          - '5000:5000'
+  apache:
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./apache
+      ports:
+          - '8080:8080'
+  ubuntu: 
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./ubuntu
+      ports:
+          - '3000:22'

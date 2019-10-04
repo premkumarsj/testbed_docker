@@ -1,0 +1,60 @@
+version: '2'
+services:
+  cpx:
+    container_name: "cpx"
+    image: "cpx:13.0-41.23"
+    privileged: true
+    volumes:
+      - ./cpx:/var/cpx
+    environment:
+      - CPX_CORES=1
+      - CPX_CONFIG='{"YIELD":"No"}'
+      - EULA=yes
+    ports:
+      - '10.106.137.213:443:9443'
+      - '10.106.137.213:80:9080'
+      - '10.106.137.213:22:22'
+  nginx_1:
+      restart: always 
+      build:
+        dockerfile: Dockerfile
+        context: ./nginx
+      ports:
+          - '10.106.137.209:80:80'
+  nginx_2:
+      restart: always                                                                                                             
+      build:                                                                                                                      
+        dockerfile: Dockerfile                                                                                                    
+        context: ./nginx                                                                                                          
+      ports:                                                                                                                      
+          - '10.106.137.210:80:80' 
+  flask:
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./flask
+      ports:
+          - '10.106.137.210:5000:5000'
+  apache:
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./apache
+      ports:
+          - '10.106.137.210:8080:8080'
+  ubuntu1: 
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./ubuntu
+      ports:
+          - '10.106.137.211:22:22'
+          - '10.106.137.211:80:80'
+  ubuntu2:                                                                                                                        
+      restart: always                                                                                                            
+      build:                                                                                                                     
+        dockerfile: Dockerfile                                                                                                   
+        context: ./ubuntu                                                                                                        
+      ports:                                                                                                                     
+          - '10.106.137.212:22:22' 
+          - '10.106.137.212:80:80' 

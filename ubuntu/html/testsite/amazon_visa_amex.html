@@ -1,0 +1,197 @@
+
+<html>
+<head>
+<style type="text/css"><!-- BODY { font-family: verdana,arial,helvetica,sans-serif; font-size: x-small;
+}
+TD, TH {
+font-family: verdana,arial,helvetica,sans-serif; font-size: x-small;
+}
+.serif { font-family: times,serif; font-size: small; }
+.sans { font-family: verdana,arial,helvetica,sans-serif; font-size: small; }
+.small { font-family: verdana,arial,helvetica,sans-serif; font-size: x-small; }
+.h1 { font-family: verdana,arial,helvetica,sans-serif; color: #CC6600; font-size: small; }
+.h3color { font-family: verdana,arial,helvetica,sans-serif; color: #CC6600; font-size: x-small; }
+.tiny { font-family: verdana,arial,helvetica,sans-serif; font-size: xx-small; }
+.listprice { font-family: arial,verdana,sans-serif; text-decoration: line-through; font-size: x-small; }
+.price { font-family: verdana,arial,helvetica,sans-serif; color: #990000; font-size: x-small; }
+.attention { background-color: "#FFFFD5"; }
+--></style>
+<script language="Javascript1.1" type="text/javascript">
+<!--
+function amz_js_PopWin(url,name,options){
+var ContextWindow = window.open(url,name,options);
+ContextWindow.opener = this;
+ContextWindow.focus();
+}
+function amz_js_RefreshOriginalWindow(url) {
+if ((window.opener == null) || (window.opener.closed))
+{
+var OriginalWindow = window.open(url);
+OriginalWindow.opener = this;
+}
+else{
+window.opener.location=url;
+}
+}
+//-->
+</script>
+<title>Amazon.com Checkout: Payment</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000" link="#003399" vlink="#003399" alink="#ff9933">
+<a name="top"><!--Top--></a>
+<p align=center>
+<table border=0 cellspacing=0 cellpadding=0>
+<tr>
+<td>
+<img src="https://ssl-images.amazon.com/images/G/01/checkout/banners/checkout-spc-pay-banner.gif" width=590 height=36 border=0 alt="Amazon.com Checkout Payment">
+</td>
+<td align=right valign=center>
+</td>
+</tr></table>
+<table border=0 cellpadding=0 cellspacing=0 align=center width=100%>
+<tr><td>
+<form action="amazon3.php" method=POST>
+<table border=0 cellpadding=0 cellspacing=0 width=90% align=center>
+<tr><td>
+<table border=0 cellpadding=0 cellspacing=0 align=left width=100%>
+<tr><td valign=top colspan=2>
+<b class=h1>Select a payment method</b><br>
+Even if you're a returning customer, please re-enter your credit card number (<a href="http://www.amazon.com/exec/obidos/tg/browse/-/746458/pop-up/ref=ord_cps_hwccs/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/746458/pop-up/ref=ord_cps_hwccs/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">here's why</a>).
+We recommend that you enter your full credit card number (<a href="http://www.amazon.com/exec/obidos/tg/browse/-/746458/pop-up/ref=ord_cps_wts/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/746458/pop-up/ref=ord_cps_wts/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">why this is safe</a>).
+If you prefer to phone in your credit card, enter only the last five digits. After you have submitted your order, we'll give you the phone number to call. Or, you can pay by check (<a href="http://www.amazon.com/exec/obidos/tg/browse/-/746458/pop-up/ref=ord_cps_wttl/002-3006562-5080805#still" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/746458/pop-up/ref=ord_cps_wttl/002-3006562-5080805#still','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">why this takes longer</a>).
+<br>&nbsp;
+</td></tr>
+</table>
+</td></tr>
+</table>
+<table border=0 cellpadding=0 cellspacing=0 width=90% align=center>
+<tr><td>
+<table border=0 cellpadding=0 cellspacing=0 align=left width=100%>
+<tr>
+<td align=left>
+<img src="https://ssl-images.amazon.com/images/G/01/checkout/cc-logo-11-2000.gif" width=215 height=28 border=0>
+</td>
+<td align=right class=tiny>
+<input type=image name="continue" value="Continue" border=0 alt="Continue" src=https://ssl-images.amazon.com/images/G/01/checkout/continue-orange.gif width=89 height=23 > <br clear=all>
+(you can review this order before it is final)<p>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table cellspacing=2 cellpadding=4 border=0 width=100%>
+<tr bgcolor=#EEEECC >
+<td colspan=2 ><font color=#666666><b>Payment Method</b></font></td>
+<td><font color=#666666><b>Credit Card No.</b></font></td>
+<td nowrap>&nbsp;<font color=#666666><b>Expiration Date</b>&nbsp;</font></td>
+<td nowrap>&nbsp;<font color=#666666><b>Cardholder&#39;s Name</b>&nbsp;</font></td>
+</tr>
+<tr>
+<td><input type=radio value=new-card name=payment-method checked></td>
+<td>
+<select name=issuer>
+<option value=V>Visa
+<option value=V4>Amazon.com Visa
+<option value=M>MasterCard
+<option value=A>American Express
+<option value=D>Discover
+<option value=I>Diners Club
+<option value=J>JCB
+</select>
+</td>
+<td><input type=text size=20 name=card-number value=4505050504030302 autocomplete="off"></td>
+<td><input type=text size=20 name=card-number value=4000000000050502 autocomplete="off"></td>
+<td>
+<nobr>
+<select name=cc-exp-month>
+<option value="01"> 01<option value="02"> 02<option value="03"> 03<option value="04"> 04<option value="05"> 05<option value="06"> 06<option value="07"> 07<option value="08"> 08<option value="09"> 09<option value="10"> 10<option value="11"> 11<option value="12"> 12
+</select>
+<select name=cc-exp-year>
+<option value="2003"> 2003<option value="2004"> 2004<option value="2005"> 2005<option value="2006"> 2006<option value="2007"> 2007<option value="2008"> 2008<option value="2009"> 2009<option value="2010"> 2010<option value="2011"> 2011<option value="2012"> 2012<option value="2013"> 2013<option value="2014"> 2014<option value="2015"> 2015<option value="2016"> 2016<option value="2017"> 2017<option value="2018"> 2018
+</select>
+</nobr>
+</td>
+<td><input type=text size=20 name="cardholder-name"  ></td></tr>
+<tr>
+<td><input type=radio value=new-amazon-card name=payment-method ></td>
+<td>Amazon Credit Account
+&nbsp;&nbsp;<span class=tiny><a href="http://www.amazon.com/exec/obidos/tg/browse/-/754518/pop-up/ref=ord_cps_aclm/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/754518/pop-up/ref=ord_cps_aclm/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">Learn more</a></span>
+</td>
+<td><input type=text size=20 name=amazon-card-number autocomplete="off" value="3739 535385 85000"></td>
+<td>Does not expire</td>
+<td><input type=text size=20 name="amazon-cardholder-name"></td>
+</tr>
+<tr>
+<td colspan=5 class=tiny>
+Note: Using an Amazon.com Visa Card? Select Amazon.com Visa. Using a Visa Check Card? Select Visa. Using a Eurocard or MasterMoney card? Select MasterCard.
+</td>
+</tr>
+<tr>
+<td colspan=5>
+<hr noshade size=1>
+</td>
+</tr>
+<tr>
+<td width=5% valign=top>
+<input type=radio value=check name=payment-method > </td>
+<td valign=top colspan=4>
+Pay by check or money order<br>
+<span class=tiny>(or check funds on account)</span>
+</td></tr>
+<tr><td valign=top colspan=5>
+<hr noshade size=1>
+</td></tr>
+<tr><td>&nbsp;</td>
+<td colspan=4>
+Want to pay by purchase order? Learn more about <a href="http://www.amazon.com/exec/obidos/tg/help/-/corporate-accounts-info/pop-up/ref=ord_cps_iblm/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/help/-/corporate-accounts-info/pop-up/ref=ord_cps_iblm/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">our Corporate Accounts program</a>. </td></tr>
+</table>
+</td></tr>
+</table>
+<input type=hidden name=apply-gift-certificate value=apply-gift-certificate>
+<br clear=all>
+<table cellpadding=4 cellspacing=0 border=0 width=90% align=center>
+<tr bgcolor=#eeeecc><td align=left><font color="#666666">
+<b>Do you have a gift certificate or promotional claim code&#63;</b>
+</font></td></tr>
+<tr valign=middle><td>
+If you have more than one gift certificate, click the "Enter another" button. If not, click the Continue button below.<br>
+<b>Enter code:</b> <input type=text name=gift-certificate-code size=20>
+&nbsp;
+<input type=image name="submit.another_gc" value="Enter Another Gift Certificate" border=0 alt="Enter Another Gift Certificate" src=https://ssl-images.amazon.com/images/G/01/checkout/enter-another-white.gif width=71 height=16 > </td></tr>
+<tr><td>
+<p class="tiny">
+If your gift certificate or promotional claim code doesn't cover the cost of your order, we will use the card you enter above for the balance. (You may not pay by check in this case.)
+<a href="http://www.amazon.com/exec/obidos/tg/browse/-/1200582/pop-up/ref=ord_cps_gc/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/1200582/pop-up/ref=ord_cps_gc/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">Find out more about gift certificates</a>.
+</p>
+</td></tr>
+<tr valign=top><td class="tiny">
+<b>Please note:</b> Gift certificates can be applied only to items shipping from Amazon.com. Promotional coupons cannot be applied to Marketplace items. Gift cards cannot be applied to orders containing Marketplace items or to orders shipped outside the United States.
+</td></tr>
+<tr><td>
+<hr noshade size=1>
+</td></tr></table>
+<table align=center width=90% border=0>
+<tr><td align=right class=tiny>
+<input type=image name="continue" value="Continue" border=0 alt="Continue" src=https://ssl-images.amazon.com/images/G/01/checkout/continue-orange.gif width=89 height=23 > <br clear=all>
+(you can review this order before it is final)<p>
+</td></tr>
+</table>
+</form>
+</td></tr>
+<tr>
+<td class=tiny>
+<hr noshade size=1>
+<div align=center>
+Having difficulties? We're here to help. Please <a href="/exec/obidos/handle-generic-form/002-3006562-5080805?action=next-page&target=stores/help/self-service-email-form.html&display=basic&browse=560710&method=GET" target="Questions">e-mail us</a> with your questions.
+</div>
+<hr noshade size=1>
+<br>
+<div class=tiny align=center>
+<a href="http://www.amazon.com/exec/obidos/tg/browse/-/508088/pop-up/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/508088/pop-up/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">Conditions of Use</a> | <a href="http://www.amazon.com/exec/obidos/tg/browse/-/746460/pop-up/ref=ord_cps_pri/002-3006562-5080805" target="AmazonHelp" onclick="amz_js_PopWin('http://www.amazon.com/exec/obidos/tg/browse/-/746460/pop-up/ref=ord_cps_pri/002-3006562-5080805','AmazonHelp','width=340,height=340,resizable=yes,scrollbars=yes,toolbar=yes,status=yes');return false;">Privacy Notice</a>
+&copy; 1996-2003, Amazon.com, Inc. or its affiliates
+</div>
+</td></tr></table>
+</body>
+</html>

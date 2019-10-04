@@ -1,30 +1,34 @@
 version: '2'
 services:
-  nginx:
-      restart: always 
-      build:
-        dockerfile: Dockerfile
-        context: ./nginx
-      ports:
-          - '80:80'
-  flask:
-      restart: always
-      build:
-        dockerfile: Dockerfile
-        context: ./flask
-      ports:
-          - '5000:5000'
-  apache:
-      restart: always
-      build:
-        dockerfile: Dockerfile
-        context: ./apache
-      ports:
-          - '8080:8080'
-  ubuntu: 
+  client_1:
       restart: always
       build:
         dockerfile: Dockerfile
         context: ./ubuntu
       ports:
-          - '3000:22'
+          - '10.106.137.210:22:22'
+          - '10.106.137.210:80:80'
+  client_2:                                                                                                                           
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./ubuntu
+      ports:
+          - '10.106.137.211:22:22'
+          - '10.106.137.211:80:80'
+  apache_1: 
+      restart: always
+      build:
+        dockerfile: Dockerfile
+        context: ./ubuntu
+      ports:
+          - '10.106.137.212:22:22'
+          - '10.106.137.212:80:80'
+  apache_2:                                                                                                                        
+      restart: always                                                                                                            
+      build:                                                                                                                     
+        dockerfile: Dockerfile                                                                                                   
+        context: ./ubuntu                                                                                                        
+      ports:                                                                                                                     
+          - '10.106.137.213:22:22' 
+          - '10.106.137.213:80:80' 
