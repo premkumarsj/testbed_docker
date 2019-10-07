@@ -1,5 +1,15 @@
+Services : 
+---------
+   80 -> Apache web server 
+   22 -> ssh server 
+
+Content:
+--------
+   html -> /var/www/html 
+   cgi-bin -> /usr/lib/cgi-bin/
 
 Access:
+-------
 SSH access to shell :
 	ssh root@localhost -p 3000
 
@@ -9,30 +19,38 @@ SCP access to download files
 TcpDump 
 	tcpdump -A 
 
+----------------------------
 Tools  :
----------
+----------------------------
+
 Torshammer1.0:
+--------------
   ./torshammer.py -t 192.168.1.100 -r 256
   Read README within the dir for more usage 
 
 Hulk: 
+------
  https://allabouttesting.org/hulk-ddos-tool-complete-installation-usage-with-examples/
- cd tools/hulk-master/ ; python hulk.py  10.106.137.210/testsite/file5k.html
-        
- Go version of hulk needs to tired out [Todo] 
+
+ python hulk.py  <target-ip>/testsite/file5k.html
+
+ Go version: 
+ go run hulk.go -site http://<target-ip>/testsite/file5k.html  
 
 ddosim:
   Unable to install [Todo]. 
 
 pyloris-3.2:
-  GUI tool . Need to find how to use it in ubuntu [To]
+  GUI tool . Need to find how to use it in ubuntu [Todo]
 
-r-u-dead-yet:
+r-u-dead-yet RUDY:
+-------------------
   Setup conf file and use 
   python r-u-dead-yet-v2.2.py 
   form is required [Todo]
 
 slowloris: 
+----------
   https://github.com/llaera/slowloris.pl
   Usage :  
   perl slowloris.pl -dns http://10.106.137.210/ 
